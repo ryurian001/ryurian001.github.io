@@ -3,7 +3,7 @@
 title: 
 email: 
 baseurl: "/JekyllTheme-ProjectGaia" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: "http://ryurian001.github.io/" # the base hostname & protocol for your site
 
 markdown: kramdown
 # toc_levels: 1……2
