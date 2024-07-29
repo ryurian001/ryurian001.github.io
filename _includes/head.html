@@ -1,16 +1,26 @@
-<div class="d-flex flex-column font-weight-bold jumbotron justify-content-center animated fadeIn p-0" id="jumbotron">
-  <div id="blurBox" class="p-4 text-center">
-    <p class="text-white animated delay-2s fadeInDown m-0">Jekyll theme by <a href="http://szhshp.org">Szhshp</a></p>
-    <p class="animated display-4 delay-2s fadeInDown text-white">Project Gaia</p>
-    <p class="animated delay-2s fadeInDown font-weight-normal pt-2 text-white m-0">
-      V2.0
-      <br>
-      Powered by Jekyll, Bootstrap 4, JQuery 3
-    </p>
+{% if page.title %}
+{% capture title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+{% else %}
+{% capture title %}{{ site.title }}{% endcapture %}
+{% endif %}
 
-    <p class="lead m-0">
-      <a class="btn-sm btn-light animated delay-2s fadeInUp" href="about.html#archivelist" role="button">What's
-        New?</a>
-    </p>
-  </div>
-</div>
+<head>
+  <title>{{ title }}</title>
+  {% include google_analytics.html %}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="{{ site.user.name }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" media="all">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}"
+    href="{{ '/feed.xml' | relative_url }}" />
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ site.favicon | relative_url }}" type="image/x-icon" />
+  <link rel="icon" href="{{ site.favicon | relative_url }}" type="image/x-icon" />
+
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,400i" rel="stylesheet">
+</head>
