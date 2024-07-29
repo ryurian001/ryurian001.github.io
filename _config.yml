@@ -2,7 +2,7 @@
 # Site settings
 title: 
 email: 
-baseurl: "/ryurian011" # the subpath of your site, e.g. /blog/
+baseurl: "/ryurian001" # the subpath of your site, e.g. /blog/
 url: "http://ryurian001.github.io/" # the base hostname & protocol for your site
 
 markdown: kramdown
